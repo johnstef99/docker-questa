@@ -14,7 +14,7 @@ the download fails or you want an other version of Questa try changing the
 download url (only version 22.1 has been tested to work with this Dockerfile).
 
 **2) Start a container using the image `questa:22.1` with your project files
-and you license attached as volumes**:
+and your license attached as volumes**:
 ```bash
 docker run -it \
          -v $(pwd):/home/user/project \
@@ -26,8 +26,8 @@ docker run -it \
 
 **3) Run `make` to compile and simulate your project files:**
 
-The *Makefile* will find all the `{MODULE}_tb.sv` files and will try to compile
+The *Makefile* will find all the `{MODULE}_tb.sv` files and try to compile
 both the `{MODULE}.sv` and `{MODULE}_tb.sv`. After that it will simulate the
 testbench file and export the according `waveforms/{MODULE}.vcd` file (you can
-    then use a program like [GTKWave](https://gtkwave.sourceforge.net/) to open
-    the vcd files).
+then use a program like [GTKWave](https://gtkwave.sourceforge.net/) to open
+the vcd files).
